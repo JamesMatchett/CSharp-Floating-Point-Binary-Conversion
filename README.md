@@ -9,7 +9,7 @@ At the moment can handle Conversion from floating point binary to denary with --
 #negative mantissa and negative exponent -------------------------------------------------------------------------------------------
 
 
-#Still to test ----------------------------------------------------------------------------------------------------------------------------------
+#Still to test -------------------------------------------------------------------------------------------------------------------------------------
 all of the above test cases with smaller than whole number fractions 
 
 

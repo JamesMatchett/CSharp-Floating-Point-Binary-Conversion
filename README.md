@@ -5,10 +5,10 @@ At the moment can handle Conversion from floating point binary to denary with
 
 #Positive mantissa and positive exponent
 #Positive mantissa and negative exponent
+#negative mantissa and positive exponent
 
 
 #Still to test
-#negative mantissa and positive exponent
 #negative mantissa and negative exponent
 
 

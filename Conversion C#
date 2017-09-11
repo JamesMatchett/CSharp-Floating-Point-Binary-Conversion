@@ -45,7 +45,7 @@ namespace FloatingPointConversion
             {
                 //call twos compliment negative
                 denaryMantissa = ConvertToDenaryNegative(mantissa);
-                Console.WriteLine("is negative");
+                Console.WriteLine(" number enetered is negative");
             }
             else
             {
@@ -54,6 +54,7 @@ namespace FloatingPointConversion
 
             Console.WriteLine(" Enter your exponent in binary");
             Console.WriteLine(" Including the binary point");
+            Console.WriteLine("");
 
             string Exponent = Console.ReadLine();
             decimal DenaryExponent = 0;
@@ -72,12 +73,12 @@ namespace FloatingPointConversion
 
             Console.WriteLine("");
             double multiplyBy = (Math.Pow(2, Convert.ToDouble(DenaryExponent)));
-            Console.WriteLine("2 to the power of {0} is {1}", DenaryExponent, multiplyBy);
+            Console.WriteLine(" 2 to the power of {0} is {1}", DenaryExponent, multiplyBy);
             double DoubleMantissa = Convert.ToDouble(denaryMantissa);
             double OutPut = (DoubleMantissa * multiplyBy);
-            Console.WriteLine("Mutliplying {0} by {1} gives {2}", denaryMantissa, multiplyBy, OutPut);
-            Console.WriteLine("Mantissa is {0}, Exponent is {1}", DoubleMantissa, DenaryExponent);
-            Console.WriteLine("The denary equivalent of the floating point entered is {0}", OutPut);
+            Console.WriteLine(" Mutliplying {0} by {1} gives {2}", denaryMantissa, multiplyBy, OutPut);
+            Console.WriteLine(" Mantissa is {0}, Exponent is {1}", DoubleMantissa, DenaryExponent);
+            Console.WriteLine(" The denary equivalent of the floating point entered is {0}", OutPut);
             Console.ReadKey();
 
         }

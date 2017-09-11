@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +14,7 @@ namespace FloatingPointConversion
             Console.WriteLine("that the binary point is one right of the MSB");
             string mantissa = Console.ReadLine();
             bool pointPresent = false;
-            
+
             for (int i = 0; i < mantissa.Length; i++)
             {
                 if (mantissa[i] == Convert.ToChar("."))
@@ -23,7 +22,7 @@ namespace FloatingPointConversion
                     pointPresent = true;
                 }
             }
-            
+
             if (!pointPresent)
             {
                 string tempstring = Convert.ToString(mantissa[0]);
@@ -64,11 +63,11 @@ namespace FloatingPointConversion
 
             Console.WriteLine("");
             double multiplyBy = (Math.Pow(2, Convert.ToDouble(DenaryExponent)));
-            Console.WriteLine("2 to the power of {0} is {1}",DenaryExponent, multiplyBy );
+            Console.WriteLine("2 to the power of {0} is {1}", DenaryExponent, multiplyBy);
             double DoubleMantissa = Convert.ToDouble(denaryMantissa);
             double OutPut = (DoubleMantissa * multiplyBy);
-            Console.WriteLine("Mutliplying {0} by {1} gives {2}",denaryMantissa,multiplyBy,OutPut);
-            Console.WriteLine("Mantissa is {0}, Exponent is {1}", denaryMantissa, DenaryExponent);
+            Console.WriteLine("Mutliplying {0} by {1} gives {2}", denaryMantissa, multiplyBy, OutPut);
+            Console.WriteLine("Mantissa is {0}, Exponent is {1}", DoubleMantissa, DenaryExponent);
             Console.WriteLine("The denary equivalent of the floating point entered is {0}", OutPut);
             Console.ReadKey();
 
@@ -142,7 +141,7 @@ namespace FloatingPointConversion
                             }
                         }
                     }
-                    
+
                     if (x > index)
                     {
                         if (HasSubtractedFirst)
@@ -162,9 +161,3 @@ namespace FloatingPointConversion
         }
     }
 }
-
-
-
-
-
-

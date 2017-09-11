@@ -6,10 +6,28 @@ using System.Threading.Tasks;
 
 namespace FloatingPointConversion
 {
+    public class ResponseType
+    {
+        public bool ResponseValid { get; set; }
+        public int Choice { get; set; }
+    }
+
+
     class BinaryToDenary
     {
         static void Main(string[] args)
         {
+            ResponseType responseType = new ResponseType();
+            responseType.ResponseValid = false;
+
+            while (responseType.ResponseValid == false)
+            {
+                Console.WriteLine("Would you like to:");
+                Console.WriteLine("1. Convert from flotig point Binary to Denary");
+                Console.WriteLine("2. Convert from Denary to normalised floating point binary");
+                responseType = GetChoice();
+            }
+
             Console.WriteLine(" Enter the mantissa including the implied binary point"); 
             Console.WriteLine(" if the binary point is not enetered it will be assumed");
             Console.WriteLine(" that the binary point is one right of the MSB");
@@ -172,6 +190,19 @@ namespace FloatingPointConversion
             }
 
             return returnDec;
+        }
+
+        public static ResponseType GetChoice()
+        {
+            ResponseType Response = new ResponseType();
+
+            if (Console.ReadLine() == "1" || Console.ReadLine() == "2")
+            {
+                Response.Choice = Convert.ToInt32(Console.ReadLine());
+                Response.ResponseValid = true;
+            }
+
+            return Response;
         }
     }
 }

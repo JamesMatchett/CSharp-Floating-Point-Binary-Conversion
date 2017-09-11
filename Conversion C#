@@ -122,7 +122,7 @@ namespace FloatingPointConversion
             }
             //convert by power 2 of relative to position left or right of binary point
             bool HasSubtractedFirst = false;
-            for (int x = 1; x < input.Length; x++)
+            for (int x = 0; x < input.Length; x++)
             {
                 if (x != index)
                 {
@@ -144,14 +144,17 @@ namespace FloatingPointConversion
 
                     if (x > index)
                     {
-                        if (HasSubtractedFirst)
+                        if (Convert.ToString(input[x]) == "1")
                         {
-                            returnDec = returnDec + Convert.ToDecimal(Math.Pow(2, (index - x) - 1));
-                        }
-                        if (!HasSubtractedFirst)
-                        {
-                            returnDec = returnDec - Convert.ToDecimal(Math.Pow(2, (index - x) - 1));
-                            HasSubtractedFirst = true;
+                            if (HasSubtractedFirst)
+                            {
+                                returnDec = returnDec + Convert.ToDecimal(Math.Pow(2, (index - x) - 1));
+                            }
+                            if (!HasSubtractedFirst)
+                            {
+                                returnDec = returnDec - Convert.ToDecimal(Math.Pow(2, (index - x) - 1));
+                                HasSubtractedFirst = true;
+                            }
                         }
                     }
                 }

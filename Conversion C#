@@ -52,7 +52,9 @@ namespace FloatingPointConversion
                 denaryMantissa = ConvertToDenaryPositive(mantissa);
             }
 
-            Console.WriteLine("Enter your exponent in binary");
+            Console.WriteLine(" Enter your exponent in binary");
+            Console.WriteLine(" Including the binary point");
+
             string Exponent = Console.ReadLine();
             decimal DenaryExponent = 0;
             if (Exponent.Length == 1)

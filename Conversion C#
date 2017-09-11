@@ -34,6 +34,7 @@ namespace FloatingPointConversion
                 {
                     tempstring = tempstring + mantissa[x];
                 }
+                Console.WriteLine("Mantissa is now {0}", tempstring);
                 mantissa = tempstring;
                 //convert to denary
             }
@@ -158,11 +159,11 @@ namespace FloatingPointConversion
                         {
                             if (HasSubtractedFirst)
                             {
-                                returnDec = returnDec + Convert.ToDecimal(Math.Pow(2, (index - x) - 1));
+                                returnDec = returnDec + Convert.ToDecimal(Math.Pow(2, (index - x) ));
                             }
                             if (!HasSubtractedFirst)
                             {
-                                returnDec = returnDec - Convert.ToDecimal(Math.Pow(2, (index - x) - 1));
+                                returnDec = returnDec - Convert.ToDecimal(Math.Pow(2, (index - x) -1 ));
                                 HasSubtractedFirst = true;
                             }
                         }

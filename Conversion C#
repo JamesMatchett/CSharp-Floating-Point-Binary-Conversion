@@ -52,6 +52,10 @@ namespace FloatingPointConversion
             Console.WriteLine("Enter your exponent in binary");
             string Exponent = Console.ReadLine();
             decimal DenaryExponent = 0;
+            if (Exponent.Length == 1)
+            {
+                Exponent = Exponent + ".";
+            }
             if (Convert.ToString(Exponent[0]) == "0")
             {
                 DenaryExponent = ConvertToDenaryPositive(Exponent);

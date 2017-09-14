@@ -103,23 +103,35 @@ namespace FloatingPointConversion
                 Console.WriteLine("Enter your denary base 10 number");
                 decimal UserDenary = Convert.ToDecimal(Console.ReadLine());
                 
+                //store mantissa in binary as a string so potential leading 0 does not get cut off
+                string MantissaBinary = "";
                 //determine if negative, positive or 0
 
                 if (UserDenary > 0)
                 {
-                    //do postive method
+                   MantissaBinary = GetBinaryMantissaPositive(UserDenary);
                 }
 
                 if (UserDenary < 0)
                 {
-                    //do negative method
+                    MantissaBinary = GetBinaryMantissaNegative(UserDenary);
                 }
 
                 if (UserDenary == 0)
                 {
                     //return 0  ya goat
+                    Console.WriteLine("Binary floating point equivalent of 0 is 0,0 unsuprisingly");
+                    Console.ReadKey();
                 }
 
+
+                if (MantissaBinary != "")
+                {
+                    //determine if normarlising is necessary
+                    bool NormalisingNecessary = false;
+
+
+                }
 
 
             }
@@ -214,6 +226,39 @@ namespace FloatingPointConversion
             }
             return returnDec;
         }
+
+
+        public static string GetBinaryMantissaPositive(decimal DenaryInput)
+        {
+            string returnString = "";
+            return returnString;
+        }
+
+        public static string GetBinaryMantissaNegative(decimal DenaryInput)
+        {
+            string returnString = "";
+            return returnString;
+        }
+
+        public static Boolean IsNormalisingNecessary(string MantissaInput)
+        {
+            bool IsNecessary = false;
+            int index = 0;
+
+            //find the index of the binary point
+            for (int i = 0; i < MantissaInput.Length; i++)
+            {
+                if (Convert.ToString(MantissaInput[i]) == ".")
+                {
+                    index = i;
+                }
+            }
+
+            //Normalising is necessary if anything left of the bianry point is an identical chain of either 1's or 0's
+
+                return IsNecessary;
+        }
+
 
 
         public static int getChoice()

@@ -99,6 +99,29 @@ namespace FloatingPointConversion
             {
                 //code for denary -> normalised binary goes here
 
+                //ask user for their denary number
+                Console.WriteLine("Enter your denary base 10 number");
+                decimal UserDenary = Convert.ToDecimal(Console.ReadLine());
+                
+                //determine if negative, positive or 0
+
+                if (UserDenary > 0)
+                {
+                    //do postive method
+                }
+
+                if (UserDenary < 0)
+                {
+                    //do negative method
+                }
+
+                if (UserDenary == 0)
+                {
+                    //return 0  ya goat
+                }
+
+
+
             }
 
         }
